@@ -159,6 +159,7 @@
       var dataString = '';
       Tabletop.init({
         key: 'https://docs.google.com/spreadsheets/d/1qeq2wRKMSP79sehE7nJFneD8CxOf9pIQGxpxdg0tLsY/pubhtml',
+        simpleSheet: true,
         callback: function (data, tabletop) {
           var title = '';
           var language = '';
@@ -195,8 +196,9 @@
           document.getElementById('input').value = title;
           document.getElementById('input').value += '\n';
           document.getElementById('input').value += language;
+
+          generate();
         },
-        simpleSheet: true
       });
     }
   </script>
